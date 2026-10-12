@@ -1,0 +1,77 @@
+/* Kodiak Fitness Center — Hapana widget stylesheet
+   Adapted from the original HTML design.
+   Hapana applies this CSS inside the widget after registering its public HTTPS URL.
+   This styles supported Hapana elements; it does not recreate the original HTML layout. */
+
+/* Fonts — original: Helvetica Neue / Helvetica / Arial */
+.MuiTypography-root,
+.Mui-button-OFS-button {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Package cards — original: charcoal #161616, subtle white borders */
+.Mui-packageCard-OFS-card {
+  background-color: #161616;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* Text within package cards */
+.Mui-packageCard-OFS-card .MuiTypography-root {
+  color: #ffffff;
+}
+
+/* Titles — original: bold, uppercase, letter-spaced */
+.Mui-packageCard-OFS-title {
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Package section headings (check contrast on the live widget) */
+.Mui-cardsList-OFS-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Base buttons — original: square-ish, uppercase */
+.Mui-button-OFS-button {
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Filled buttons — white background, black text */
+.Mui-button-OFS-containedPrimary,
+.Mui-button-OFS-containedSecondary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  box-shadow: none;
+}
+
+.Mui-button-OFS-containedPrimary:hover,
+.Mui-button-OFS-containedSecondary:hover {
+  background-color: #dddddd;
+  color: #000000;
+  border-color: #dddddd;
+  box-shadow: none;
+}
+
+/* Outline buttons — white when displayed on dark cards */
+.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedPrimary,
+.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedSecondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedPrimary:hover,
+.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.10);
+}
