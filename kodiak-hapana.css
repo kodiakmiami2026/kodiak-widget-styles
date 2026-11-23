@@ -76,12 +76,12 @@
   background-color: rgba(255, 255, 255, 0.10);
 }
 
-/* 1. Fix spots text overlapping the Book button */
+/* 1. Fix spots text overlapping Book button */
 .Mui-classesWidget-OFS-block4 .Mui-classesWidget-OFS-h4.status {
   white-space: normal;
 }
 
-/* 2. Fix date arrow overlapping the year on mobile */
+/* 2. Fix mobile date arrow */
 @media (max-width: 599.95px) {
   .Mui-classListHeader-OFS-borderRight .Mui-classListHeader-OFS-dateFilter {
     width: auto;
@@ -89,17 +89,39 @@
   }
 }
 
-/* 3. Book / Reservar button colors */
+/* 3. Book button in the class list */
 .Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary {
   background-color: #000000 !important;
   color: #ffffff !important;
   border-color: #000000 !important;
 }
 
-/* 4. Book / Reservar hover and focus states */
+/* 4. Book button hover and focus */
 .Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary:hover,
 .Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary:focus {
   background-color: #333333 !important;
   color: #ffffff !important;
   border-color: #333333 !important;
+}
+
+/* 5. Mobile class-details popup buttons */
+@media (max-width: 599.95px) {
+  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:not(:disabled) {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+  }
+
+  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:not(:disabled) .MuiButton-label {
+    color: #ffffff !important;
+  }
+
+  /* Keep unavailable buttons visibly disabled,
+     but make their text readable */
+  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:disabled {
+    background-color: #dddddd !important;
+    color: #444444 !important;
+    border-color: #bbbbbb !important;
+    opacity: 1 !important;
+  }
 }
