@@ -1,15 +1,21 @@
-/* Kodiak Fitness Center — Hapana widget stylesheet
-   Adapted from the original HTML design.
-   Hapana applies this CSS inside the widget after registering its public HTTPS URL.
-   This styles supported Hapana elements; it does not recreate the original HTML layout. */
 
-/* Fonts — original: Helvetica Neue / Helvetica / Arial */
+/* =========================================
+   KODIAK FITNESS CENTER
+   HAPANA CUSTOM STYLESHEET
+   Desktop + Mobile
+========================================= */
+
+/* FONTS */
 .MuiTypography-root,
-.Mui-button-OFS-button {
+.Mui-button-OFS-button,
+.MuiButton-root {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Package cards — original: charcoal #161616, subtle white borders */
+/* =========================================
+   PACKAGE CARDS
+========================================= */
+
 .Mui-packageCard-OFS-card {
   background-color: #161616;
   color: #ffffff;
@@ -18,12 +24,12 @@
   box-shadow: none;
 }
 
-/* Text within package cards */
+/* Text inside package cards */
 .Mui-packageCard-OFS-card .MuiTypography-root {
   color: #ffffff;
 }
 
-/* Titles — original: bold, uppercase, letter-spaced */
+/* Package titles */
 .Mui-packageCard-OFS-title {
   color: #ffffff;
   font-weight: 700;
@@ -31,97 +37,187 @@
   letter-spacing: 1px;
 }
 
-/* Package section headings (check contrast on the live widget) */
+/* Package section headings */
 .Mui-cardsList-OFS-title {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Base buttons — original: square-ish, uppercase */
-.Mui-button-OFS-button {
+/* =========================================
+   GLOBAL HAPANA BUTTONS
+   BLACK BACKGROUND / WHITE TEXT
+========================================= */
+
+/* Base button appearance */
+.Mui-button-OFS-button,
+.MuiButton-root {
   border-radius: 2px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Filled buttons — white background, black text */
+/* All standard Hapana buttons */
+.Mui-button-OFS-button,
+.MuiButton-root,
+button[class*="Mui-button-OFS-"],
+a[class*="Mui-button-OFS-"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Filled and outlined variants */
 .Mui-button-OFS-containedPrimary,
-.Mui-button-OFS-containedSecondary {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #ffffff;
-  box-shadow: none;
-}
-
-.Mui-button-OFS-containedPrimary:hover,
-.Mui-button-OFS-containedSecondary:hover {
-  background-color: #dddddd;
-  color: #000000;
-  border-color: #dddddd;
-  box-shadow: none;
-}
-
-/* Outline buttons — white when displayed on dark cards */
-.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedPrimary,
-.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedSecondary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-}
-
-.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedPrimary:hover,
-.Mui-packageCard-OFS-card .Mui-button-OFS-outlinedSecondary:hover {
-  background-color: rgba(255, 255, 255, 0.10);
-}
-
-/* 1. Fix spots text overlapping Book button */
-.Mui-classesWidget-OFS-block4 .Mui-classesWidget-OFS-h4.status {
-  white-space: normal;
-}
-
-/* 2. Fix mobile date arrow */
-@media (max-width: 599.95px) {
-  .Mui-classListHeader-OFS-borderRight .Mui-classListHeader-OFS-dateFilter {
-    width: auto;
-    padding-right: 36px;
-  }
-}
-
-/* 3. Book button in the class list */
-.Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary {
+.Mui-button-OFS-containedSecondary,
+.Mui-button-OFS-outlinedPrimary,
+.Mui-button-OFS-outlinedSecondary,
+.MuiButton-contained,
+.MuiButton-outlined {
   background-color: #000000 !important;
   color: #ffffff !important;
   border-color: #000000 !important;
 }
 
-/* 4. Book button hover and focus */
-.Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary:hover,
-.Mui-classesWidget-OFS-classList2 .Mui-button-OFS-outlinedSecondary:focus {
+/* Text inside buttons */
+.Mui-button-OFS-button span,
+.MuiButton-root span,
+.MuiButton-label,
+button[class*="Mui-button-OFS-"] span,
+a[class*="Mui-button-OFS-"] span {
+  color: #ffffff !important;
+}
+
+/* Hover and focus states */
+.Mui-button-OFS-button:hover,
+.Mui-button-OFS-button:focus,
+.MuiButton-root:hover,
+.MuiButton-root:focus,
+button[class*="Mui-button-OFS-"]:hover,
+button[class*="Mui-button-OFS-"]:focus,
+a[class*="Mui-button-OFS-"]:hover,
+a[class*="Mui-button-OFS-"]:focus {
   background-color: #333333 !important;
   color: #ffffff !important;
   border-color: #333333 !important;
 }
 
-/* 5. Mobile class-details popup buttons */
+/* Keep disabled buttons visibly disabled */
+.Mui-button-OFS-button:disabled,
+.MuiButton-root:disabled,
+button[class*="Mui-button-OFS-"]:disabled {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   CLASS LIST BOOK BUTTONS
+========================================= */
+
+.Mui-classesWidget-OFS-classList2
+.Mui-button-OFS-outlinedSecondary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+.Mui-classesWidget-OFS-classList2
+.Mui-button-OFS-outlinedSecondary:hover,
+.Mui-classesWidget-OFS-classList2
+.Mui-button-OFS-outlinedSecondary:focus {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+/* =========================================
+   PACKAGE CARD BUTTONS
+========================================= */
+
+.Mui-packageCard-OFS-card
+.Mui-button-OFS-outlinedPrimary,
+.Mui-packageCard-OFS-card
+.Mui-button-OFS-outlinedSecondary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+
+.Mui-packageCard-OFS-card
+.Mui-button-OFS-outlinedPrimary:hover,
+.Mui-packageCard-OFS-card
+.Mui-button-OFS-outlinedSecondary:hover {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+/* =========================================
+   CLASS DETAILS / BOOKING POPUP
+========================================= */
+
+/* Buttons inside Hapana dialogs */
+.MuiDialog-root .MuiButton-root,
+.MuiDialog-root .Mui-button-OFS-button,
+.MuiDialogContent-root .MuiButton-root,
+.MuiDialogActions-root .MuiButton-root,
+[class*="Mui-modalLayout-OFS-"] .MuiButton-root,
+[class*="Mui-modalLayout-OFS-"] .Mui-button-OFS-button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+/* Popup button labels */
+.MuiDialog-root .MuiButton-label,
+.MuiDialogActions-root .MuiButton-label,
+[class*="Mui-modalLayout-OFS-"] .MuiButton-label {
+  color: #ffffff !important;
+}
+
+/* =========================================
+   CLASS LIST LAYOUT FIX
+========================================= */
+
+/* Prevent spots text overlapping Book */
+.Mui-classesWidget-OFS-block4
+.Mui-classesWidget-OFS-h4.status {
+  white-space: normal;
+}
+
+/* =========================================
+   MOBILE FIXES
+========================================= */
+
 @media (max-width: 599.95px) {
-  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:not(:disabled) {
+
+  /* Fix date arrow overlapping the year */
+  .Mui-classListHeader-OFS-borderRight
+  .Mui-classListHeader-OFS-dateFilter {
+    width: auto;
+    padding-right: 36px;
+  }
+
+  /* Preserve black buttons on mobile */
+  .Mui-button-OFS-button,
+  .MuiButton-root,
+  button[class*="Mui-button-OFS-"],
+  a[class*="Mui-button-OFS-"] {
     background-color: #000000 !important;
     color: #ffffff !important;
     border-color: #000000 !important;
   }
 
-  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:not(:disabled) .MuiButton-label {
+  /* Preserve white text on mobile */
+  .Mui-button-OFS-button span,
+  .MuiButton-root span,
+  .MuiButton-label,
+  button[class*="Mui-button-OFS-"] span {
     color: #ffffff !important;
-  }
-
-  /* Keep unavailable buttons visibly disabled,
-     but make their text readable */
-  .Mui-modalLayout-OFS-dialogContainer button.Mui-button-OFS-button:disabled {
-    background-color: #dddddd !important;
-    color: #444444 !important;
-    border-color: #bbbbbb !important;
-    opacity: 1 !important;
   }
 }
